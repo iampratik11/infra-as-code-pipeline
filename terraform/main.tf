@@ -35,9 +35,10 @@ module "iam" {
 module "compute" {
   source = "./modules/compute"
 
-  project_name = "ecommerce"
-  environment  = var.environment
-  aws_region   = var.aws_region
+  project_name    = "ecommerce"
+  environment     = var.environment
+  aws_region      = var.aws_region
+  container_image = var.container_image
 
   vpc_id = module.networking.vpc_id
 

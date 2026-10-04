@@ -17,3 +17,5 @@ private_subnet_cidrs = [
   "10.0.11.0/24",
   "10.0.12.0/24"
 ]
+
+container_image = "806997204926.dkr.ecr.us-east-2.amazonaws.com/ecommerce-dev:2ce3337"

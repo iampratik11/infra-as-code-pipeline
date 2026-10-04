@@ -37,3 +37,8 @@ variable "private_subnet_cidrs" {
   description = "CIDR blocks for private subnets"
   type        = list(string)
 }
+
+variable "container_image" {
+  description = "Container image used by the ECS service"
+  type        = string
+}

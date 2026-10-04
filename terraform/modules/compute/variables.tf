@@ -51,5 +51,4 @@ variable "ecs_task_role_arn" {
 variable "container_image" {
   description = "Container image URI used by the ECS task"
   type        = string
-  default     = "806997204926.dkr.ecr.us-east-2.amazonaws.com/ecommerce-dev:2ce3337"
 }
