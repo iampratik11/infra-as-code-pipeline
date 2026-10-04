@@ -24,3 +24,10 @@ module "security" {
 
   vpc_id = module.networking.vpc_id
 }
+
+module "iam" {
+  source = "./modules/iam"
+
+  project_name = "ecommerce"
+  environment  = var.environment
+}
