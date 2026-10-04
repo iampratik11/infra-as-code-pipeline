@@ -3,4 +3,3 @@ npm-debug.log
 .git
 .github
 terraform/.terraform
-terraform/.terraform.lock.hcl
