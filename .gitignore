@@ -1,0 +1,14 @@
+node_modules/
+npm-debug.log
+
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+!terraform/environments/*.tfvars
+
+
+.env
+.env.*
+
+.DS_Store
