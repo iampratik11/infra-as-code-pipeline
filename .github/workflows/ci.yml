@@ -8,8 +8,7 @@ on:
 
   push:
     branches:
-      - staging
-      - main
+      - '**'
 
 permissions:
   contents: read
