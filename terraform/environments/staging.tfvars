@@ -1,6 +1,8 @@
 environment = "staging"
 aws_region  = "us-east-2"
 
+container_image = "806997204926.dkr.ecr.us-east-2.amazonaws.com/ecommerce-staging:2ce3337"
+
 vpc_cidr = "10.1.0.0/16"
 
 availability_zones = [
@@ -17,3 +19,5 @@ private_subnet_cidrs = [
   "10.1.11.0/24",
   "10.1.12.0/24"
 ]
+
+

@@ -38,7 +38,3 @@ output "github_actions_role_arn" {
   value       = module.github_oidc.github_actions_role_arn
 }
 
-output "github_actions_policy_json" {
-  description = "Rendered GitHub Actions IAM policy"
-  value       = module.github_oidc.github_actions_policy_json
-}

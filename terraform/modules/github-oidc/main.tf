@@ -1,17 +1,5 @@
-resource "aws_iam_openid_connect_provider" "github" {
+data "aws_iam_openid_connect_provider" "github" {
   url = "https://token.actions.githubusercontent.com"
-
-  client_id_list = [
-    "sts.amazonaws.com"
-  ]
-
-  thumbprint_list = [
-    "6938fd4d98bab03faadb97b34396831e3780aea1"
-  ]
-
-  tags = {
-    Name = "github-actions-oidc"
-  }
 }
 
 data "aws_caller_identity" "current" {}
@@ -24,7 +12,7 @@ data "aws_iam_policy_document" "github_actions_assume_role" {
       type = "Federated"
 
       identifiers = [
-        aws_iam_openid_connect_provider.github.arn
+        data.aws_iam_openid_connect_provider.github.arn
       ]
     }
 
@@ -134,6 +122,7 @@ data "aws_iam_policy_document" "github_actions" {
 
 resource "aws_iam_role_policy" "github_actions" {
   name = "${var.project_name}-${var.environment}-github-actions-policy"
+
   role = aws_iam_role.github_actions.id
 
   policy = data.aws_iam_policy_document.github_actions.json
